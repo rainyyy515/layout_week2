@@ -8,15 +8,15 @@ body {
   max-width: 980px;
   margin: 0 auto;
 }
-h2{
+h2 {
   font-size: 64px;
   line-height: 84px;
   padding-top: 56px;
 }
 .banner {
   background-image: url(./img/banner.png);
-  background-repeat: no-repeat;
   height: 958px;
+  background-repeat: no-repeat;
   background-position: center;
   border: 1px solid #707070;
   .bannerText {
@@ -57,58 +57,68 @@ h2{
   }
   ul {
     margin-top: 28px;
-    list-style-type: disc;
-    display: inline-block;
     li {
       margin-bottom: 28px;
     }
   }
 }
-
-.content{
+.dot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: #891818;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+}
+.content {
   background: #000;
   text-align: center;
   padding-bottom: 120px;
   margin-top: 56px;
-  h2{
+  h2 {
     margin-bottom: 12px;
   }
-  h3{
+  h3 {
     font-size: 24px;
     line-height: 42px;
     margin-bottom: 32px;
   }
-  p{
+  p {
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 68px;
   }
-  img{
+  img {
     margin-bottom: 40px;
     margin-right: 24px;
   }
 }
 
-.work{
+.work {
   color: #000000;
   text-align: center;
-  h2{
+  h2 {
     margin-bottom: 16px;
   }
-  p{
+  p {
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 56px;
   }
-  ul{
+  ul {
     display: flex;
     width: 1250px;
     margin: 0 auto;
     flex-wrap: wrap;
-    li{
+    li {
       margin: 0 12px;
       margin-bottom: 48px;
-      p{
+      p {
         margin: 0;
         margin-top: 16px;
         line-height: 42px;
@@ -117,20 +127,20 @@ h2{
   }
 }
 
-.footer{
+.footer {
   background: #000;
   text-align: center;
   padding-bottom: 64px;
-  h2{
+  h2 {
     margin-bottom: 16px;
   }
-  p:not(:last-child){
+  p:not(:last-child) {
     margin-bottom: 16px;
   }
-  a{
+  a {
     text-decoration: none;
     color: #ffffff;
-    &:hover{
+    &:hover {
       color: red;
     }
   }
