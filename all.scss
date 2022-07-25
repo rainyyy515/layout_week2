@@ -5,7 +5,7 @@ body {
   font-size: 24px;
 }
 .container {
-  max-width: 980px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 h2 {
@@ -14,16 +14,19 @@ h2 {
   padding-top: 56px;
 }
 .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url(./img/banner.png);
   height: 958px;
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid #707070;
-  .bannerText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .bannerIcon {
+    display: flex;
+    li {
+      margin-right: 16px;
+    }
   }
   h1 {
     font-size: 80px;
@@ -35,9 +38,6 @@ h2 {
   }
   p:nth-child(3) {
     margin-bottom: 40px;
-  }
-  a {
-    padding-right: 15px;
   }
 }
 
@@ -51,21 +51,33 @@ h2 {
   img {
     margin-bottom: 20px;
   }
-  p:nth-child(5) {
-    border-bottom: 1px solid #000;
-    padding-bottom: 24px;
-  }
-  ul {
-    margin-top: 28px;
-    li {
-      margin-bottom: 28px;
+  .aboutItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 28px;
+    &::after {
+      content: '';
+      width: 384px;
+      height: 1px;
+      background: #000;
+    }
+    li:nth-child(1) {
+      margin-bottom: 4px;
+    }
+    li:nth-child(2) {
+      margin-bottom: 8px;
+    }
+    li:nth-child(3) {
+      margin-bottom: 24px;
     }
   }
 }
-.dot{
+.dot {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 28px;
   &::before {
     content: '';
     width: 22px;
@@ -78,7 +90,6 @@ h2 {
 .content {
   background: #000;
   text-align: center;
-  padding-bottom: 120px;
   margin-top: 56px;
   h2 {
     margin-bottom: 12px;
@@ -93,9 +104,17 @@ h2 {
     line-height: 30px;
     margin-bottom: 68px;
   }
-  img {
-    margin-bottom: 40px;
-    margin-right: 24px;
+  .brand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 120px;
+    img {
+      margin-bottom: 40px;
+      &:nth-child(2) {
+        margin-right: 24px;
+      }
+    }
   }
 }
 
@@ -112,11 +131,9 @@ h2 {
   }
   ul {
     display: flex;
-    width: 1250px;
-    margin: 0 auto;
     flex-wrap: wrap;
+    justify-content: space-between;
     li {
-      margin: 0 12px;
       margin-bottom: 48px;
       p {
         margin: 0;
@@ -134,8 +151,11 @@ h2 {
   h2 {
     margin-bottom: 16px;
   }
-  p:not(:last-child) {
-    margin-bottom: 16px;
+  .footerItem{
+
+    li:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
   a {
     text-decoration: none;
